@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj4258sxf2p6h"]
+
+[ext_resource type="Script" path="res://jump_pickup.cs" id="1_oxdqy"]
+[ext_resource type="Texture2D" uid="uid://dakc8l7xa4g40" path="res://temp-assets/dash.png" id="1_w0iln"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7g81c"]
+
+[node name="JumpPickup" type="Node2D"]
+script = ExtResource("1_oxdqy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_w0iln")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_7g81c")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
