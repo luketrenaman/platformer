@@ -1,19 +1,19 @@
 [gd_scene load_steps=59 format=3 uid="uid://bsy0xqkjoawmi"]
 
-[ext_resource type="Texture2D" uid="uid://euyl0wtj3iiy" path="res://assets/Background/Green.png" id="1_15ppr"]
-[ext_resource type="Texture2D" uid="uid://dqr3qcmr1t25s" path="res://assets/Main Characters/Ninja Frog/Fall (32x32).png" id="1_58grh"]
-[ext_resource type="Script" path="res://Player.cs" id="1_g46qn"]
-[ext_resource type="Texture2D" uid="uid://crx4d2dvyblt3" path="res://assets/Main Characters/Ninja Frog/Hit (32x32).png" id="2_ger4w"]
-[ext_resource type="Texture2D" uid="uid://3uodxpspp8do" path="res://assets/Main Characters/Ninja Frog/Idle (32x32).png" id="3_klv8u"]
-[ext_resource type="Texture2D" uid="uid://ds0xhx5g3ym8k" path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" id="4_01d6q"]
-[ext_resource type="Texture2D" uid="uid://pmn54ph2hdg8" path="res://assets/Main Characters/Ninja Frog/Double Jump (32x32).png" id="5_wtan6"]
-[ext_resource type="Texture2D" uid="uid://c6rfwec4dm1wy" path="res://assets/Main Characters/Ninja Frog/Run (32x32).png" id="6_f5gay"]
-[ext_resource type="Texture2D" uid="uid://uilvotiexnl4" path="res://assets/Main Characters/Ninja Frog/Wall Jump (32x32).png" id="7_fc1gw"]
-[ext_resource type="Texture2D" uid="uid://d0k3xwhbs250l" path="res://assets/Terrain/Terrain (16x16).png" id="9_85cyq"]
-[ext_resource type="Texture2D" uid="uid://dv2km3ggwny48" path="res://temp-assets/empty.png" id="14_qnh6r"]
+[ext_resource type="Texture2D" uid="uid://euyl0wtj3iiy" path="res://assets/Background/Green.png" id="1_4cj4i"]
+[ext_resource type="Texture2D" uid="uid://d0k3xwhbs250l" path="res://assets/Terrain/Terrain (16x16).png" id="2_ci6d2"]
+[ext_resource type="Script" path="res://Player.cs" id="3_0q1fl"]
+[ext_resource type="Texture2D" uid="uid://dqr3qcmr1t25s" path="res://assets/Main Characters/Ninja Frog/Fall (32x32).png" id="4_vf04k"]
+[ext_resource type="Texture2D" uid="uid://crx4d2dvyblt3" path="res://assets/Main Characters/Ninja Frog/Hit (32x32).png" id="5_p3j6i"]
+[ext_resource type="Texture2D" uid="uid://3uodxpspp8do" path="res://assets/Main Characters/Ninja Frog/Idle (32x32).png" id="6_dletc"]
+[ext_resource type="Texture2D" uid="uid://ds0xhx5g3ym8k" path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" id="7_lc0qa"]
+[ext_resource type="Texture2D" uid="uid://pmn54ph2hdg8" path="res://assets/Main Characters/Ninja Frog/Double Jump (32x32).png" id="8_pvvmn"]
+[ext_resource type="Texture2D" uid="uid://c6rfwec4dm1wy" path="res://assets/Main Characters/Ninja Frog/Run (32x32).png" id="9_pfxpr"]
+[ext_resource type="Texture2D" uid="uid://uilvotiexnl4" path="res://assets/Main Characters/Ninja Frog/Wall Jump (32x32).png" id="10_vfw6m"]
+[ext_resource type="Texture2D" uid="uid://dakc8l7xa4g40" path="res://temp-assets/dash.png" id="11_l6bal"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ejdje"]
-texture = ExtResource("9_85cyq")
+texture = ExtResource("2_ci6d2")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -596,175 +596,175 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ejdje")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tn5w0"]
-atlas = ExtResource("1_58grh")
+atlas = ExtResource("4_vf04k")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vch4b"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lp120"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngmwc"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3quc5"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5s6aq"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_84tce"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pwwf"]
-atlas = ExtResource("2_ger4w")
+atlas = ExtResource("5_p3j6i")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ijnqh"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ivgq"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_355b4"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a02vv"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ma0bk"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ysa57"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6epa"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c3fs7"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gkmnl"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8xycm"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oq6ra"]
-atlas = ExtResource("3_klv8u")
+atlas = ExtResource("6_dletc")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_15r3p"]
-atlas = ExtResource("4_01d6q")
+atlas = ExtResource("7_lc0qa")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mw0ek"]
-atlas = ExtResource("5_wtan6")
+atlas = ExtResource("8_pvvmn")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynxi7"]
-atlas = ExtResource("5_wtan6")
+atlas = ExtResource("8_pvvmn")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bqv7v"]
-atlas = ExtResource("5_wtan6")
+atlas = ExtResource("8_pvvmn")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ocld2"]
-atlas = ExtResource("5_wtan6")
+atlas = ExtResource("8_pvvmn")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6awfo"]
-atlas = ExtResource("5_wtan6")
+atlas = ExtResource("8_pvvmn")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g1acn"]
-atlas = ExtResource("5_wtan6")
+atlas = ExtResource("8_pvvmn")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qerft"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gljm"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vqco3"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g7oo2"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wrex1"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_og65h"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8s7tj"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ps5to"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tq1od"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w3tqn"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nunud"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_afp45"]
-atlas = ExtResource("6_f5gay")
+atlas = ExtResource("9_pfxpr")
 region = Rect2(352, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_41avl"]
-atlas = ExtResource("7_fc1gw")
+atlas = ExtResource("10_vfw6m")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gw287"]
-atlas = ExtResource("7_fc1gw")
+atlas = ExtResource("10_vfw6m")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rwcmm"]
-atlas = ExtResource("7_fc1gw")
+atlas = ExtResource("10_vfw6m")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w40qn"]
-atlas = ExtResource("7_fc1gw")
+atlas = ExtResource("10_vfw6m")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xgycn"]
-atlas = ExtResource("7_fc1gw")
+atlas = ExtResource("10_vfw6m")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_midor"]
@@ -946,7 +946,7 @@ scale = Vector2(2, 2)
 texture_repeat = 2
 position = Vector2(192, 66)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_15ppr")
+texture = ExtResource("1_4cj4i")
 offset = Vector2(200, 200)
 region_enabled = true
 region_rect = Rect2(0, 0, 1200, 720)
@@ -958,12 +958,12 @@ scale = Vector2(2, 2)
 [node name="TileMap" type="TileMap" parent="Pixels"]
 tile_set = SubResource("TileSet_cjn5d")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65537, 65536, 1, -1, 65536, 1, 65535, 65536, 1, 131071, 65536, 1, 196607, 65536, 1, 262143, 65536, 1, 327679, 65536, 1, 393215, 65536, 1, 458751, 65536, 1, 524287, 65536, 1, 589823, 65536, 1, 655359, 65536, 1, 720895, 65536, 1, 786431, 65536, 1, 851967, 65536, 1, -131072, 65536, 1, -131071, 65536, 1, -131070, 65536, 1, -131069, 65536, 1, -131068, 65536, 1, -131067, 65536, 1, -131066, 65536, 1, -131065, 65536, 1, -131064, 65536, 1, -131063, 65536, 1, -131062, 65536, 1, -131061, 65536, 1, -131060, 65536, 1, -131059, 65536, 1, -131058, 65536, 1, -131057, 65536, 1, -131056, 65536, 1, -131055, 65536, 1, -131054, 65536, 1, -131053, 65536, 1, -131052, 65536, 1, -131051, 65536, 1, -131050, 65536, 1, -131049, 65536, 1, -131048, 65536, 1, -131047, 65536, 1, -131046, 65536, 1, -131045, 65536, 1, -131044, 65536, 1, -131043, 65536, 1, -131042, 65536, 1, -131041, 65536, 1, -131040, 65536, 1, -131039, 65536, 1, -131038, 65536, 1, -131037, 65536, 1, -131036, 65536, 1, -131035, 65536, 1, -65499, 65536, 1, 37, 65536, 1, 65573, 65536, 1, 131109, 65536, 1, 196645, 65536, 1, 262181, 65536, 1, 327717, 65536, 1, 393253, 65536, 1, 458789, 65536, 1, 524325, 65536, 1, 589861, 65536, 1, 655397, 65536, 1, 720933, 65536, 1, 786469, 65536, 1, 852005, 65536, 1, 917541, 65536, 1, 983077, 65536, 1, 1048613, 65536, 1, 1114149, 65536, 1, 1179685, 65536, 1, 917503, 65536, 1, 983039, 65536, 1, 1048575, 65536, 1, 1114111, 65536, 1, 1179647, 65536, 1, 1245183, 65536, 1, 1310719, 65536, 1, 1376255, 65536, 1, 1441791, 65536, 1, 1376293, 65536, 1, 1310757, 65536, 1, 1245221, 65536, 1, 1376256, 65536, 1, 1376257, 65536, 1, 1376258, 65536, 1, 1376259, 65536, 1, 1376260, 65536, 1, 1376261, 65536, 1, 1376262, 65536, 1, 1376263, 65536, 1, 1376264, 65536, 1, 1376265, 65536, 1, 1376266, 65536, 1, 1376267, 65536, 1, 1376268, 65536, 1, 1376269, 65536, 1, 1376270, 65536, 1, 1376271, 65536, 1, 1376272, 65536, 1, 1376273, 65536, 1, 1376274, 65536, 1, 1376275, 65536, 1, 1376276, 65536, 1, 1376277, 65536, 1, 1376278, 65536, 1, 1376279, 65536, 1, 1376280, 65536, 1, 1376281, 65536, 1, 1376282, 65536, 1, 1376283, 65536, 1, 1376284, 65536, 1, 1376285, 65536, 1, 1376286, 65536, 1, 1376287, 65536, 1, 1376288, 65536, 1, 1376289, 65536, 1, 1376290, 65536, 1, 1376291, 65536, 1, 1376292, 65536, 1, 1114112, 393216, 0, 1179648, 393216, 1, 1245184, 393216, 2, 1114113, 458752, 0, 1179649, 458752, 1, 1245185, 458752, 2, 1114114, 524288, 0, 1179650, 524288, 1, 1245186, 524288, 2, 1048582, 393216, 0, 1114118, 393216, 1, 1179654, 393216, 2, 1048583, 458752, 0, 1114119, 458752, 1, 1179655, 458752, 2, 1048584, 524288, 0, 1114120, 524288, 1, 1179656, 524288, 2, 851980, 393216, 0, 917516, 393216, 1, 983052, 393216, 2, 851981, 458752, 0, 917517, 458752, 1, 983053, 458752, 2, 851982, 524288, 0, 917518, 524288, 1, 983054, 524288, 2, 655366, 393216, 0, 720902, 393216, 1, 786438, 393216, 2, 655367, 458752, 0, 720903, 458752, 1, 786439, 458752, 2, 655368, 524288, 0, 720904, 524288, 1, 786440, 524288, 2, 655372, 786432, 0, 655373, 851968, 0, 655374, 917504, 0, 720921, 786432, 0, 720922, 851968, 0, 720923, 917504, 0)
+layer_0/tile_data = PackedInt32Array(-65537, 65536, 1, -1, 65536, 1, 65535, 65536, 1, 131071, 65536, 1, 196607, 65536, 1, 262143, 65536, 1, 327679, 65536, 1, 393215, 65536, 1, 458751, 65536, 1, 524287, 65536, 1, 589823, 65536, 1, 655359, 65536, 1, 720895, 65536, 1, 786431, 65536, 1, 851967, 65536, 1, -131072, 65536, 1, -131071, 65536, 1, -131070, 65536, 1, -131069, 65536, 1, -131068, 65536, 1, -131067, 65536, 1, -131066, 65536, 1, -131065, 65536, 1, -131064, 65536, 1, -131063, 65536, 1, -131062, 65536, 1, -131061, 65536, 1, -131060, 65536, 1, -131059, 65536, 1, -131058, 65536, 1, -131057, 65536, 1, -131056, 65536, 1, -131055, 65536, 1, -131054, 65536, 1, -131053, 65536, 1, -131052, 65536, 1, -131051, 65536, 1, -131050, 65536, 1, -131049, 65536, 1, -131048, 65536, 1, -131047, 65536, 1, -131046, 65536, 1, -131045, 65536, 1, -131044, 65536, 1, -131043, 65536, 1, -131042, 65536, 1, -131041, 65536, 1, -131040, 65536, 1, -131039, 65536, 1, -131038, 65536, 1, -131037, 65536, 1, -131036, 65536, 1, -131035, 65536, 1, -65499, 65536, 1, 37, 65536, 1, 65573, 65536, 1, 131109, 65536, 1, 196645, 65536, 1, 262181, 65536, 1, 327717, 65536, 1, 393253, 65536, 1, 458789, 65536, 1, 524325, 65536, 1, 589861, 65536, 1, 655397, 65536, 1, 720933, 65536, 1, 786469, 65536, 1, 852005, 65536, 1, 917541, 65536, 1, 983077, 65536, 1, 1048613, 65536, 1, 1114149, 65536, 1, 1179685, 65536, 1, 917503, 65536, 1, 983039, 65536, 1, 1048575, 65536, 1, 1114111, 65536, 1, 1179647, 65536, 1, 1245183, 65536, 1, 1310719, 65536, 1, 1376255, 65536, 1, 1441791, 65536, 1, 1376293, 65536, 1, 1310757, 65536, 1, 1245221, 65536, 1, 1376256, 65536, 1, 1376257, 65536, 1, 1376258, 65536, 1, 1376259, 65536, 1, 1376260, 65536, 1, 1376261, 65536, 1, 1376262, 65536, 1, 1376263, 65536, 1, 1376264, 65536, 1, 1376265, 65536, 1, 1376266, 65536, 1, 1376267, 65536, 1, 1376268, 65536, 1, 1376269, 65536, 1, 1376270, 65536, 1, 1376271, 65536, 1, 1376272, 65536, 1, 1376273, 65536, 1, 1376274, 65536, 1, 1376275, 65536, 1, 1376276, 65536, 1, 1376277, 65536, 1, 1376278, 65536, 1, 1376279, 65536, 1, 1376280, 65536, 1, 1376281, 65536, 1, 1376282, 65536, 1, 1376283, 65536, 1, 1376284, 65536, 1, 1376285, 65536, 1, 1376286, 65536, 1, 1376287, 65536, 1, 1376288, 65536, 1, 1376289, 65536, 1, 1376290, 65536, 1, 1376291, 65536, 1, 1376292, 65536, 1, 1114112, 393216, 0, 1179648, 393216, 1, 1245184, 393216, 2, 1114113, 458752, 0, 1179649, 458752, 1, 1245185, 458752, 2, 1114114, 524288, 0, 1179650, 524288, 1, 1245186, 524288, 2, 1048582, 393216, 0, 1114118, 393216, 1, 1179654, 393216, 2, 1048583, 458752, 0, 1114119, 458752, 1, 1179655, 458752, 2, 1048584, 524288, 0, 1114120, 524288, 1, 1179656, 524288, 2, 851980, 393216, 0, 917516, 393216, 1, 983052, 393216, 2, 851981, 458752, 0, 917517, 458752, 1, 983053, 458752, 2, 851982, 524288, 0, 917518, 524288, 1, 983054, 524288, 2, 655366, 393216, 0, 720902, 393216, 1, 786438, 393216, 2, 655367, 458752, 0, 720903, 458752, 1, 786439, 458752, 2, 655368, 524288, 0, 720904, 524288, 1, 786440, 524288, 2, 655372, 786432, 0, 655373, 851968, 0, 655374, 917504, 0, 720921, 786432, 0, 720922, 851968, 0, 720923, 917504, 0, 196626, 0, 4, 262162, 0, 5, 196627, 131072, 4, 262163, 131072, 5, 327698, 0, 5, 393234, 0, 5, 458770, 0, 5, 524306, 0, 5, 327699, 131072, 5, 393235, 131072, 5, 458771, 131072, 5, 524307, 131072, 5, 589843, 131072, 6, 589842, 0, 6)
 metadata/_edit_lock_ = true
 
 [node name="Player" type="CharacterBody2D" parent="Pixels"]
 position = Vector2(26.5, 225)
-script = ExtResource("1_g46qn")
+script = ExtResource("3_0q1fl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pixels/Player"]
 texture_filter = 1
@@ -976,5 +976,6 @@ position = Vector2(0.5, 2.5)
 shape = SubResource("RectangleShape2D_vhv6j")
 
 [node name="CurrentPower" type="Sprite2D" parent="Pixels"]
+visible = false
 position = Vector2(17, 16)
-texture = ExtResource("14_qnh6r")
+texture = ExtResource("11_l6bal")

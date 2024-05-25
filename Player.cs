@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using static Godot.TextServer;
 
 public partial class Player : CharacterBody2D
 {
@@ -11,7 +12,7 @@ public partial class Player : CharacterBody2D
 	private const int MAX_JUMPS = 2;
 	private Vector2 DoubleJumpDirection;
 	// Mutually exclusive states which determine animations
-	private enum PLAYER_STATE { ON_WALL, ON_FLOOR, JUMPING, ROLLING, IDLE };
+	private enum PLAYER_STATE { ON_WALL, ON_FLOOR, JUMPING, ROLLING, IDLE, FALLING };
 	private PLAYER_STATE currentState;
 	private PLAYER_STATE previousState;
 
@@ -23,12 +24,14 @@ public partial class Player : CharacterBody2D
 	public void OnAbilityPickup (Vector2 direction)
 	{
         DoubleJumpDirection = direction;
-        GD.Print(direction);
+		var ability = GetParent().GetNode<Sprite2D>("CurrentPower");
+		ability.Rotation = Mathf.Atan2(direction.Y, direction.X);
+		ability.Visible = true;
     }
     private Vector2 UseMidairAbility()
 	{
         currentState = PLAYER_STATE.ROLLING;
-        return DoubleJumpDirection * Speed * 2.0f;
+        return DoubleJumpDirection * Speed * 2.5f;
     }
 
     private float SpeedIfOnFloor()
@@ -72,8 +75,12 @@ public partial class Player : CharacterBody2D
 		animationNode = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		DoubleJumpDirection = new Vector2(0, 0);
     }
-	public override void _PhysicsProcess(double delta)
-	{
+	public bool DirectionOppositeOfIntent(Vector2 direction)
+    {
+		return direction.X != 0 && Math.Sign(direction.X) != Math.Sign(DoubleJumpDirection.X);
+	}
+    public override void _PhysicsProcess(double delta)
+    {
 		Vector2 velocity = Velocity;
         // Handle Jump.
         if (Input.IsActionJustPressed("ui_accept") && jumpsUsed < MAX_JUMPS)
@@ -84,7 +91,8 @@ public partial class Player : CharacterBody2D
                 velocity.Y = JumpVelocity;
 				currentState = PLAYER_STATE.JUMPING;
 			}
-			else
+			// If double jump is not null
+			else if(!DoubleJumpDirection.Equals(Vector2.Zero))
 			{
 				// Dive Jump
 				velocity = UseMidairAbility();
@@ -122,12 +130,18 @@ public partial class Player : CharacterBody2D
 			}
         }
 
-		// Get the input direction and handle the movement/deceleration.
-		// As good practice, you should replace UI actions with custom gameplay actions.
-		if (currentState != PLAYER_STATE.ROLLING)
+        // Get the input direction and handle the movement/deceleration.
+        // As good practice, you should replace UI actions with custom gameplay actions.
+        Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
+
+		// If jump cancelled or intent changes direction cancel midair jump
+        if ((Input.IsActionJustReleased("ui_accept") || DirectionOppositeOfIntent(direction)) && currentState == PLAYER_STATE.ROLLING)
+        {
+            currentState = PLAYER_STATE.FALLING;
+        }
+        if (currentState != PLAYER_STATE.ROLLING)
 		{
-			Vector2 direction = Input.GetVector("ui_left", "ui_right", "ui_up", "ui_down");
-			if (direction != Vector2.Zero)
+			if (direction != Vector2.Zero && currentState != PLAYER_STATE.ROLLING)
 			{
 				velocity.X = direction.X * Speed;
 			}
